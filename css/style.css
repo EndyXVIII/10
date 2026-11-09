@@ -1236,3 +1236,8 @@ html, body { overflow-x: clip; }
   max-width: 330px; margin: 6px auto 0; visibility: hidden;
 }
 .nu-after em { font-style: italic; color: #8A4A22; }
+
+/* gif in una lettera: attaccata con lo scotch */
+.letter-gif { position: relative; margin: 4px auto 34px; width: 78%; max-width: 280px; padding: 8px; background: #FFFDF6; transform: rotate(-2.5deg); box-shadow: 0 12px 26px -16px rgba(74,46,26,.6), 0 1px 3px rgba(74,46,26,.15); }
+.letter-gif img, .letter-gif video { display: block; width: 100%; height: auto; border-radius: 2px; }
+.letter-gif::before { content: ""; position: absolute; top: -10px; left: 50%; width: 70px; height: 20px; margin-left: -35px; background: rgba(246,183,30,.4); transform: rotate(3deg); }

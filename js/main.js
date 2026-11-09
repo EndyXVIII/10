@@ -1352,6 +1352,15 @@
     $('#letterBye').textContent = C.lettere_firma || '';
     $('#letterName').textContent = C.nome_lui;
     $('#letterBody').innerHTML = l.testo.split(/\n\s*\n/).map((p) => `<p>${escapeHTML(p)}</p>`).join('');
+    // una gif (o un video corto) attaccata in fondo alla lettera, come una foto con lo scotch
+    if (l.gif) {
+      const fig = document.createElement('figure');
+      fig.className = 'letter-gif';
+      const m = fig.appendChild(mediaEl(l.gif, ''));
+      m.onerror = () => fig.remove();
+      if (m.tagName === 'VIDEO') m.play().catch(() => {});
+      $('#letterBody').appendChild(fig);
+    }
 
     const flap = $('.le-flap', btn);
     const ov = $('#letterOverlay'), paper = $('#letterPaper');
@@ -1362,7 +1371,7 @@
       .to(ov, { opacity: 1, duration: 0.35 })
       .fromTo(paper, { y: 80, scaleY: 0.32, opacity: 0 }, { y: 0, scaleY: 1, opacity: 1, duration: 0.95, ease: 'power3.out' }, '<')
       .fromTo('.letter-fold', { opacity: 1 }, { opacity: 0.45, duration: 1 }, '<.3')
-      .fromTo('.letter-hello, #letterBody p, .letter-sign', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.12 }, '<.2')
+      .fromTo('.letter-hello, #letterBody p, #letterBody .letter-gif, .letter-sign', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.12 }, '<.2')
       .fromTo('.letter-petal', { opacity: 0, y: -180, x: 40, rotation: -70 }, { opacity: 1, y: 0, x: 0, rotation: 18, duration: 1.8, ease: 'power1.out' }, '<.1')
       .add(() => $('#letterClose').focus({ preventScroll: true }));
   }

@@ -48,6 +48,7 @@ Everything personal lives in `data/content.json`. Keep the JSON valid: double qu
   - `finale`: in the finale, before your signature
 
   Example: `"finale": "prima riga\nseconda riga"`
+- `lettere[].gif`: optional. A GIF (or short video) taped at the bottom of that letter, before the signature, e.g. `"gif": "assets/foto/ridere.gif"`. The "ridere" letter already has an empty `gif` field ready.
 - `finestre`: the "noi due" section. Two polaroids start at opposite edges of the screen (`io`: you in Granada, `tu`: her in Veternigo). As she scrolls they move toward each other until they touch, then `noi` (a photo or video of you two) opens on top of them, followed by `didascalia`. Put the files in `assets/foto/`. The section stays hidden until `io` and `tu` are both filled in; `noi` is optional. Example:
   ```json
   "finestre": {"io": "assets/foto/io.jpg", "tu": "assets/foto/tu.jpg", "noi": "assets/foto/noi.mp4", "didascalia": "Ogni chilometro finisce qui: in noi due."}

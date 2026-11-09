@@ -355,6 +355,53 @@
       <p class="roll-hint" id="rollHint">strofina la foto col dito per svilupparla</p>
     </section>
 
+    <!-- Una pausa: il barattolo di Nutella, da aprire -->
+    <section id="nutella" class="chapter">
+      <header class="chapter-head">
+        <p class="kicker">una pausa</p>
+        <h2 class="title" id="nuTitle">So che<br><em>la desideri.</em></h2>
+      </header>
+      <div class="nu-stage">
+        <svg class="nu-jar" id="nuJar" viewBox="0 0 220 280" role="button" tabindex="0" aria-label="Apri il barattolo">
+          <defs>
+            <linearGradient id="nuChoc" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#3B1D10" /><stop offset=".45" stop-color="#6B3A1F" /><stop offset="1" stop-color="#341A0E" />
+            </linearGradient>
+            <linearGradient id="nuLidG" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#E9E4DA" /><stop offset=".4" stop-color="#FFFFFF" /><stop offset="1" stop-color="#D8D1C4" />
+            </linearGradient>
+            <linearGradient id="nuSpoonG" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#F4F4F2" /><stop offset=".5" stop-color="#B9BCC2" /><stop offset="1" stop-color="#E4E6EA" />
+            </linearGradient>
+          </defs>
+          <ellipse class="nu-shadow" cx="110" cy="268" rx="78" ry="9" />
+          <!-- barattolo -->
+          <path class="nu-body" d="M44 74 C30 84 26 100 26 120 L26 226 C26 248 40 260 62 260 L158 260 C180 260 194 248 194 226 L194 120 C194 100 190 84 176 74 Z" fill="url(#nuChoc)" />
+          <ellipse class="nu-top" cx="110" cy="72" rx="68" ry="12" />
+          <path class="nu-glass" d="M40 118 C40 100 44 90 52 84 L52 236 C46 232 40 226 40 214 Z" />
+          <g class="nu-label">
+            <rect x="34" y="132" width="152" height="82" rx="10" />
+            <text class="nu-brand" x="110" y="181" text-anchor="middle"><tspan class="nu-n">n</tspan>utella</text>
+            <text class="nu-for" x="110" y="203" text-anchor="middle">per Sandy</text>
+          </g>
+          <!-- cucchiaino: si vede solo sopra la superficie della crema, così sembra che entri nel barattolo -->
+          <clipPath id="nuAbove"><rect x="-200" y="-400" width="620" height="472" /></clipPath>
+          <g clip-path="url(#nuAbove)"><g class="nu-spoon" id="nuSpoon">
+            <path d="M0 0 L8 -150" stroke="url(#nuSpoonG)" stroke-width="9" stroke-linecap="round" />
+            <ellipse cx="-1" cy="10" rx="16" ry="22" fill="url(#nuSpoonG)" />
+            <path class="nu-dollop" id="nuDollop" d="M-14 6 C-16 -6 -6 -12 0 -6 C6 -14 18 -6 14 6 C12 16 2 24 0 26 C-2 24 -12 16 -14 6 Z" />
+          </g></g>
+          <!-- coperchio -->
+          <g class="nu-lid" id="nuLid">
+            <rect x="38" y="30" width="144" height="44" rx="9" fill="url(#nuLidG)" />
+            <path class="nu-ridges" d="M52 36 V68 M66 36 V68 M80 36 V68 M94 36 V68 M108 36 V68 M122 36 V68 M136 36 V68 M150 36 V68 M164 36 V68" />
+          </g>
+        </svg>
+      </div>
+      <p class="nu-hint" id="nuHint">tocca il barattolo</p>
+      <p class="nu-after" id="nuAfter"></p>
+    </section>
+
     <!-- 3.5 Anche adesso -->
     <section id="conte" class="chapter">
       <header class="chapter-head">

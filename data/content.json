@@ -4,7 +4,7 @@
   "nome_affettuoso": "amore mio",
   "data_inizio": "2026-10-10",
   "ora_inizio": "13:00",
-  "messaggio_finale_girasole": "Non sei la persona che ho lasciato li mentre partivo. Sei la persona che porterò con me ovunque andrò.",
+  "messaggio_finale_girasole": "Non sei la persona che ho lasciato qui mentre partivo. Sei la persona che porterò con me ovunque andrò.",
   "messaggio_festa": "Siamo distanti, amore mio, quindi lo “festeggiamo” così: tu a Veternigo, io a Granada, e in mezzo questa pagina piena di girasoli. Il resto lo recuperiamo con gli interessi appena ci vediamo.",
   "messaggio_chiusura": "Distanti fisicamente ma il mio cuore è intrecciato al tuo",
   "messaggio_segreto": "Sei il mio posto preferito in questo mondo.",
@@ -38,6 +38,9 @@
     "Parte da Granada e arriva fino a te, un battito alla volta.",
     "Quando ti sembro lontano, appoggia qui il dito.<br><em>Io ci sono.</em>"
   ],
+  "nutella": {
+    "dopo": "Appena torno, la apriamo insieme.<br><em>Il primo cucchiaino è tuo.</em>"
+  },
   "solo_te": [
     "Se qualcuno dovesse chiedermi cos'è per me l'amore,<br><em>parlerei solo di te.</em>",
     "Anche quando il mondo non applaudirà per te, <em>lo farò io.</em><br>E anche senza un trofeo, correrò sempre da te solo per dirti quanto sono felice per te, anche per i piccoli ma immensi traguardi che riesci a raggiungere.",
@@ -77,7 +80,7 @@
     {"giorno": 28, "titolo": "I sogni che porti dentro", "testo": "", "foto": ""},
     {"giorno": 29, "titolo": "Come rendi più belle le mie giornate, senza nemmeno accorgertene", "testo": "", "foto": ""},
     {"giorno": 30, "titolo": "Che mi hai fatto scoprire una felicità che non sapevo di cercare", "testo": "", "foto": ""},
-    {"giorno": 31, "titolo": "Semplicemente, che sei tu. Ti amo infinito + 2", "testo": "", "foto": ""}
+    {"giorno": 31, "titolo": "Semplicemente, che sei tu", "testo": "", "foto": ""}
   ],
   "lettere_saluto": "Amore,",
   "lettere_firma": "Il tuo,",
@@ -89,7 +92,7 @@
     {"etichetta": "Apri quando non riesci a dormire",
      "testo": "Chiudi gli occhi. Immagina il mio braccio intorno a te e il mio respiro lento vicino al tuo orecchio. Sono lì, anche se in mezzo ci sono 1.596 chilometri: il buio è lo stesso, e il cielo pure.\n\nPensa a una cosa bella che faremo insieme quando torno e lasciati portare. Domattina sarai tu a dirmi di svegliarmi, come sempre. E io sarò felice di sentire la tua voce per prima."},
     {"etichetta": "Apri quando hai bisogno di ridere",
-     "testo": "Non so se lo hai rimosso o meno, ma io ho ancora in mente il momento in cui uno spritz è andato perduto perchè qualcuno con l'hula hoop lo ha rotto................SANDYYYYYYYY"},
+     "testo": "Promemoria ufficiale: in questo preciso momento, a Granada, c'è un ragazzo che ascolta la musica che tu insulti. Probabilmente a volume alto. Probabilmente pensando a te che la insulti.\n\nE ricordati che quando ti addormenti spari cacchiate bellissime: io me le ricordo tutte, e prima o poi ci scrivo un libro. Titolo provvisorio: «La mia principessa, alle due di notte». Ecco, adesso sorridi. Lo so che stai sorridendo."},
     {"etichetta": "Apri quando ti manco troppo",
      "testo": "Anche tu mi manchi. Tantissimo. Probabilmente adesso sto guardando una tua foto, o rileggendo un tuo messaggio per la decima volta. Se ti viene da piangere non trattenerti: vuol dire solo che quello che abbiamo è vero.\n\nIo intanto conto i giorni a quando potrò cercarti tra la gente, vederti arrivare e stringerti così forte da recuperare tutti gli abbracci che ci siamo persi. Fino ad allora, la sera, guarda la luna: la sto guardando anch'io."},
     {"etichetta": "Apri quando dimentichi quanto sei speciale",

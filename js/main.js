@@ -401,6 +401,7 @@
     initPosta();
     initFinestre();
     initRullino();
+    initNutella();
     initConte();
     initSoloTe();
     initFinale();
@@ -1916,6 +1917,70 @@
     };
     roll.addEventListener('pointerup', end);
     roll.addEventListener('pointercancel', end);
+  }
+
+  // ==========================================================
+  // UNA PAUSA: la Nutella. So che la desideri.
+  // ==========================================================
+
+  function initNutella() {
+    const jar = $('#nuJar'), lid = $('#nuLid'), spoon = $('#nuSpoon'), dollop = $('#nuDollop');
+    const hint = $('#nuHint'), after = $('#nuAfter');
+    after.innerHTML = (C.nutella && C.nutella.dopo) || '';
+    const OUT = { x: 260, y: -80, r: 40, o: 0 };
+    const DIP = { x: 112, y: 98, r: 12, o: 1 };
+    const UP = { x: 118, y: 40, r: -8, o: 1 };
+    // il cucchiaino si muove nelle coordinate del disegno: la conca è nel suo punto (0,0)
+    const sp = { ...OUT, d: 0 };
+    const drawSpoon = () => {
+      spoon.setAttribute('transform', `translate(${sp.x} ${sp.y}) rotate(${sp.r})`);
+      spoon.setAttribute('opacity', sp.o);
+      dollop.setAttribute('transform', `translate(0 8) scale(${sp.d}) translate(0 -8)`);
+    };
+    const spoonTo = (to, vars) => gsap.to(sp, { ...to, ...vars, onUpdate: drawSpoon });
+
+    if (RM) {
+      gsap.set(lid, { opacity: 0 }); Object.assign(sp, UP, { d: 1 }); drawSpoon();
+      hint.hidden = true; gsap.set(after, { autoAlpha: 1 });
+      return;
+    }
+    drawSpoon();
+    // finché è chiuso, ogni tanto il barattolo ammicca
+    const tease = gsap.to(jar, { rotation: 4, transformOrigin: '50% 100%', duration: 0.12, yoyo: true, repeat: 5, repeatDelay: 0, ease: 'sine.inOut' });
+    const teaseLoop = gsap.delayedCall(3.2, function again() { tease.restart(); teaseLoop.restart(true); });
+    tease.pause();
+    ScrollTrigger.create({ trigger: jar, start: 'top 75%', once: true, onEnter: () => tease.restart() });
+
+    let open = false, busy = false;
+    const pop = () => {
+      const [x, y] = FX.center(lid);
+      FX.burst(x, y + 20, { count: 22, kinds: ['heart', 'spark', 'heart'], speed: 7, life: 100, size: 10 });
+    };
+    const openJar = () => {
+      if (busy) return;
+      busy = true; haptic(12);
+      if (!open) {
+        open = true;
+        teaseLoop.kill(); tease.kill(); gsap.set(jar, { rotation: 0 });
+        gsap.to(hint, { autoAlpha: 0, duration: 0.4 });
+        jar.setAttribute('aria-label', 'Un altro cucchiaino');
+        gsap.timeline({ onComplete: () => { busy = false; } })
+          .to(lid, { rotation: -7, svgOrigin: '110 52', duration: 0.1, yoyo: true, repeat: 5, ease: 'sine.inOut' })
+          .to(lid, { x: -60, y: -190, rotation: -50, opacity: 0, duration: 0.8, ease: 'power2.in' })
+          .add(pop, '-=.6')
+          .add(spoonTo(DIP, { duration: 0.7, ease: 'power2.out' }), '-=.2')
+          .add(() => { sp.d = 1; drawSpoon(); })
+          .add(spoonTo(UP, { duration: 0.8, ease: 'back.out(1.8)' }), '+=.25')
+          .fromTo(after, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 1, ease: 'power2.out' }, '-=.3');
+      } else {
+        gsap.timeline({ onComplete: () => { busy = false; } })
+          .add(spoonTo(DIP, { duration: 0.45, ease: 'power2.in' }))
+          .add(spoonTo(UP, { duration: 0.6, ease: 'back.out(2)' }), '+=.1')
+          .add(() => { const [x, y] = FX.center(dollop); FX.burst(x, y, { count: 8, kinds: ['heart'], speed: 4, life: 70, size: 8 }); });
+      }
+    };
+    jar.addEventListener('click', openJar);
+    jar.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openJar(); } });
   }
 
   // ==========================================================

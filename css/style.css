@@ -1212,3 +1212,27 @@ html, body { overflow-x: clip; }
 .loader-text b { font-family: var(--f-title); font-weight: 400; font-size: 15px; color: var(--oro); margin-left: 4px; font-variant-numeric: tabular-nums; }
 .loader-bar { width: 160px; height: 3px; border-radius: 3px; background: rgba(74,46,26,.12); overflow: hidden; justify-self: center; }
 .loader-bar i { display: block; height: 100%; background: var(--giallo-girasole); transform: scaleX(0); transform-origin: 0 50%; transition: transform .3s ease-out; }
+
+/* ==========================================================
+   v12 · Una pausa: la Nutella
+   ========================================================== */
+#nutella { min-height: 0; padding-top: 16vh; padding-bottom: 14vh; background: radial-gradient(ellipse 70% 45% at 50% 55%, rgba(246,183,30,.16), transparent 70%); }
+#nutella .title em { color: #8A4A22; }
+.nu-stage { margin-top: 36px; }
+.nu-jar { width: min(62vw, 250px); height: auto; overflow: visible; cursor: pointer; display: block; -webkit-tap-highlight-color: transparent; outline: none; }
+.nu-jar:focus-visible { outline: 2px dashed var(--oro); outline-offset: 8px; border-radius: 12px; }
+.nu-shadow { fill: rgba(74,46,26,.16); }
+.nu-top { fill: #2E160B; }
+.nu-glass { fill: #fff; opacity: .16; }
+.nu-label rect { fill: #FFFDF8; }
+.nu-brand { font-family: var(--f-body); font-weight: 700; font-size: 44px; letter-spacing: -1px; fill: #E2231A; }
+.nu-n { fill: #1A1A1A; }
+.nu-for { font-family: var(--f-hand); font-size: 19px; fill: #6B3A1F; }
+.nu-ridges { stroke: rgba(0,0,0,.07); stroke-width: 2; }
+.nu-dollop { fill: #5A2E17; }
+.nu-hint { font-family: var(--f-hand); font-size: 21px; color: var(--inchiostro-soft); margin: 18px 0 0; }
+.nu-after {
+  font-family: var(--f-title); font-weight: 300; font-size: clamp(20px, 5.6vw, 26px); line-height: 1.35; text-align: center;
+  max-width: 330px; margin: 6px auto 0; visibility: hidden;
+}
+.nu-after em { font-style: italic; color: #8A4A22; }

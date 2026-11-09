@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Endy & Sandy🌻</title>
+  <meta name="description" content="Per Sandy. Solo per te.">
+  <meta name="theme-color" content="#FFF8E7">
+
+  <!-- Anteprima del link (WhatsApp, iMessage…). Dopo la pubblicazione sostituisci og:image con l'indirizzo completo, vedi README -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Endy & Sandy🌻">
+  <meta property="og:description" content="Per Sandy. Solo per te.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- sigillo di ceralacca condiviso dalle buste -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="waxG2" cx="40%" cy="35%" r="70%">
+        <stop offset="0" stop-color="#F6B71E" />
+        <stop offset=".6" stop-color="#E08E0B" />
+        <stop offset="1" stop-color="#A9620A" />
+      </radialGradient>
+      <symbol id="waxSeal" viewBox="0 0 100 100">
+        <path d="M50 4 C62 3 70 9 79 13 C88 19 95 28 96 40 C99 52 95 63 90 72 C83 84 72 93 58 96 C46 99 33 96 23 89 C12 82 5 70 4 57 C2 44 6 32 14 22 C23 11 36 5 50 4 Z" fill="url(#waxG2)" />
+        <circle cx="50" cy="50" r="31" fill="none" stroke="#A9620A" stroke-opacity=".55" stroke-width="2" />
+        <g fill="none" stroke="#8A4E08" stroke-opacity=".75" stroke-width="2.4" stroke-linecap="round">
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(30 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(60 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(90 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(120 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(150 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(180 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(210 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(240 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(270 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(300 50 50)" />
+          <path d="M50 40 C54 34 54 26 50 20 C46 26 46 34 50 40 Z" transform="rotate(330 50 50)" />
+        </g>
+        <circle cx="50" cy="50" r="8" fill="#8A4E08" fill-opacity=".55" />
+      </symbol>
+    </defs>
+  </svg>
+  <canvas id="pollen" aria-hidden="true"></canvas>
+
+  <!-- Loader: un germoglio che cresce -->
+  <div id="loader" aria-live="polite">
+    <svg class="sprout" viewBox="0 0 80 100" aria-hidden="true">
+      <path class="sprout-soil" d="M10 88 Q40 80 70 88" />
+      <path class="sprout-stem" d="M40 86 C40 70 41 58 40 44" />
+      <path class="sprout-leaf l" d="M40 58 C30 56 22 48 22 40 C32 40 39 47 40 58 Z" />
+      <path class="sprout-leaf r" d="M40 50 C50 48 58 40 58 32 C48 32 41 39 40 50 Z" />
+    </svg>
+    <p class="loader-text">Sto preparando tutto per te <b id="loaderPct">0%</b></p>
+    <div class="loader-bar" aria-hidden="true"><i id="loaderBar"></i></div>
+  </div>
+
+  <!-- 3.0 Ingresso -->
+  <section id="lock" aria-label="Ingresso" hidden>
+    <div class="lock-inner">
+      <p class="lock-kicker">10 · 10 → 10 · 11</p>
+      <div class="envelope" id="lockEnvelope">
+        <div class="env-back"></div>
+        <div class="env-card"><span>Sandy</span></div>
+        <svg class="env-front" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 0 L150 112 L300 0 L300 200 L0 200 Z" />
+          <path class="env-crease" d="M0 200 L128 98 M300 200 L172 98" />
+        </svg>
+        <div class="env-flap"><svg viewBox="0 0 300 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L300 0 L156 126 Q150 131 144 126 Z" /></svg></div>
+        <div class="seal" id="seal" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <clipPath id="sealL"><path d="M0 0 L52 0 L46 22 L55 38 L44 55 L54 72 L47 100 L0 100 Z" /></clipPath>
+              <clipPath id="sealR"><path d="M52 0 L100 0 L100 100 L47 100 L54 72 L44 55 L55 38 L46 22 Z" /></clipPath>
+              <radialGradient id="waxG" cx="40%" cy="35%" r="70%">
+                <stop offset="0" stop-color="#F6B71E" />
+                <stop offset=".6" stop-color="#E08E0B" />
+                <stop offset="1" stop-color="#A9620A" />
+              </radialGradient>
+              <g id="waxShape">
+                <path d="M50 4 C62 3 70 9 79 13 C88 19 95 28 96 40 C99 52 95 63 90 72 C83 84 72 93 58 96 C46 99 33 96 23 89 C12 82 5 70 4 57 C2 44 6 32 14 22 C23 11 36 5 50 4 Z" fill="url(#waxG)" />
+                <circle cx="50" cy="50" r="31" fill="none" stroke="#A9620A" stroke-opacity=".55" stroke-width="2" />
+                <g class="seal-flower" fill="none" stroke="#8A4E08" stroke-opacity=".75" stroke-width="2.2" stroke-linecap="round"></g>
+                <circle cx="50" cy="50" r="8" fill="#8A4E08" fill-opacity=".55" />
+              </g>
+            </defs>
+            <g class="seal-half seal-l" clip-path="url(#sealL)"><use href="#waxShape" /></g>
+            <g class="seal-half seal-r" clip-path="url(#sealR)"><use href="#waxShape" /></g>
+          </svg>
+        </div>
+        <svg class="seed-fall" viewBox="0 0 20 30" aria-hidden="true"><path d="M10 1 C16 6 18 16 15 24 C13 28 7 28 5 24 C2 16 4 6 10 1 Z" /><path class="seed-stripe" d="M10 4 L10 26" /></svg>
+      </div>
+
+      <h1 class="lock-title">Per Sandy.<br><em>Solo per te.</em></h1>
+
+      <form id="lockForm" class="lock-form" autocomplete="off" novalidate>
+        <label for="secret" class="lock-label">Il nostro giorno</label>
+        <div class="lock-row">
+          <input id="secret" name="secret" type="text" inputmode="text" placeholder="gg/mm" aria-describedby="lockHint" enterkeyhint="go" autocapitalize="off" spellcheck="false">
+          <button type="submit" class="btn-round" aria-label="Apri">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12 H18 M13 6 L19 12 L13 18" /></svg>
+          </button>
+        </div>
+        <p id="lockHint" class="lock-hint" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="plant" id="plant" aria-hidden="true">
+      <svg viewBox="0 0 120 160">
+        <path class="plant-soil" d="M0 150 Q60 136 120 150 L120 160 L0 160 Z" />
+        <path class="plant-stem" d="M60 146 C60 120 62 100 60 76" />
+        <path class="plant-leaf l" d="M60 112 C46 110 36 100 34 88 C48 88 58 98 60 112 Z" />
+        <path class="plant-leaf r" d="M60 100 C74 98 84 88 86 76 C72 76 62 86 60 100 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Musica -->
+  <button id="musicToggle" class="music-toggle" aria-label="Musica" aria-pressed="false" hidden>
+    <span class="note">♪</span>
+  </button>
+  <audio id="music" src="assets/music.mp3" preload="none" loop></audio>
+
+  <main id="app" aria-hidden="true">
+
+    <!-- Apertura -->
+    <section id="inizio" class="chapter hero">
+      <canvas class="hero-sky" id="heroSky" aria-hidden="true"></canvas>
+      <div class="hero-dawn" aria-hidden="true"></div>
+      <div class="hero-flash" aria-hidden="true"></div>
+      <svg class="hero-thread" aria-hidden="true"><line id="heroLine" /></svg>
+      <div class="hero-light" id="lightG" aria-hidden="true"><i></i><span>Granada</span></div>
+      <div class="hero-light" id="lightV" aria-hidden="true"><i></i><span>Veternigo</span></div>
+      <p class="hero-km" id="heroKm" aria-hidden="true">1.596 km</p>
+      <div class="hero-text">
+        <p class="kicker">10 · 10 · 2026 — 10 · 11 · 2026</p>
+        <h1 class="hero-title">Il nostro<br>primo mese<br><em>ufficiale!</em></h1>
+        <p class="hero-since">insieme da <span id="since">31 giorni</span></p>
+        <figure class="song" data-song="apertura" hidden>
+        <svg class="song-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>
+        <blockquote class="song-text"></blockquote>
+        <figcaption class="song-cap"></figcaption>
+      </figure>
+      </div>
+      <svg class="hero-flower" id="heroFlower" viewBox="-260 -260 520 520" aria-hidden="true"></svg>
+      <p class="hero-meet" id="heroMeet">Ovunque siamo,<br><em>ci incontriamo qui.</em></p>
+      <div class="scroll-cue" aria-hidden="true"><span>scorri</span><i></i></div>
+    </section>
+
+    <!-- 3.1 Mappa -->
+    <section id="mappa" class="chapter">
+      <header class="chapter-head">
+        <p class="kicker">I · la distanza</p>
+        <h2 class="title">Da Granada<br><em>fino a te.</em></h2>
+      </header>
+
+      <p class="km-big" aria-label="1.596 chilometri"><span id="kmCount">1.596</span><small>km</small></p>
+      <p class="sub">in linea d'aria, tra la mia finestra e la tua</p>
+
+      <div class="map-wrap">
+        <svg id="map" role="img" aria-label="Mappa: un aereo vola da Granada a Veternigo"></svg>
+      </div>
+      <button class="link-btn replay" id="replayFlight">rifai il viaggio ✈</button>
+
+      <div class="pass reveal" aria-label="Carta d'imbarco">
+        <div class="pass-main">
+          <p class="pass-kicker">Carta d'imbarco</p>
+          <div class="pass-route">
+            <div class="pass-city"><b>GRX</b><span>Granada</span></div>
+            <svg class="pass-plane" viewBox="0 0 120 24" aria-hidden="true">
+              <path class="pass-line" d="M4 12 H116" />
+              <path class="pass-jet" d="M60 2 C61 2 61.6 3.4 61.6 5 V9.4 L70 14 V16 L61.6 13.6 V18.4 L64.4 20.4 V22 L60 21 L55.6 22 V20.4 L58.4 18.4 V13.6 L50 16 V14 L58.4 9.4 V5 C58.4 3.4 59 2 60 2 Z" transform="rotate(90 60 12)" />
+            </svg>
+            <div class="pass-city"><b>VCE</b><span>Veternigo</span></div>
+          </div>
+          <dl class="pass-grid">
+            <div><dt>Passeggero</dt><dd id="passName">Endy</dd></div>
+            <div><dt>Distanza</dt><dd id="passKm">1.596 km</dd></div>
+            <div><dt>Posto</dt><dd>accanto a te</dd></div>
+          </dl>
+        </div>
+        <div class="pass-stub" aria-hidden="true">
+          <p>imbarco</p>
+          <b>presto</b>
+          <span class="barcode"></span>
+        </div>
+      </div>
+
+      <figure class="song" data-song="mappa" hidden>
+        <svg class="song-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>
+        <blockquote class="song-text"></blockquote>
+        <figcaption class="song-cap"></figcaption>
+      </figure>
+
+      <div class="places">
+        <article class="place-card" id="cardGranada">
+          <p class="place-label">Qui a Granada</p>
+          <p class="place-time" data-tz="Europe/Madrid">--:--</p>
+          <div class="place-weather">
+            <span class="wx-icon" aria-hidden="true"></span>
+            <span class="wx-text">…</span>
+          </div>
+        </article>
+        <article class="place-card" id="cardVeternigo">
+          <p class="place-label">Lì a Veternigo</p>
+          <p class="place-time" data-tz="Europe/Rome">--:--</p>
+          <div class="place-weather">
+            <span class="wx-icon" aria-hidden="true"></span>
+            <span class="wx-text">…</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="closing-line reveal">Tanti chilometri. Lo stesso cielo.</p>
+    </section>
+
+    <div class="petal-drift" aria-hidden="true"></div>
+
+    <!-- 3.2 Girasole -->
+    <section id="girasole" class="chapter">
+      <div class="warmth" aria-hidden="true"></div>
+      <header class="chapter-head">
+        <p class="kicker">II · il girasole</p>
+        <h2 class="title">31 cose che amo di te.<br><em>Una per petalo.</em></h2>
+      </header>
+
+      <div class="flower-stage">
+        <button class="little-sun" id="littleSun" aria-label="Il sole">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="ls-glow" cx="50" cy="50" r="46" />
+            <circle class="ls-disc" cx="50" cy="50" r="22" />
+            <g class="ls-rays"></g>
+          </svg>
+        </button>
+        <svg id="flower" viewBox="-240 -240 480 580" role="img" aria-label="Girasole con 31 petali"></svg>
+        <div class="flower-ui">
+          <p class="counter"><span id="petalCount">0</span> / 31</p>
+          <p class="flower-tip">tocca il petalo che brilla</p>
+          <button class="btn btn-sun" id="nextPetal">Apri il prossimo petalo</button>
+          <button class="link-btn" id="openAll" hidden>apri tutti</button>
+        </div>
+      </div>
+
+      <p class="final-girasole" id="finalGirasole" aria-live="polite"></p>
+      <p class="secret-msg" id="secretMsg" aria-live="polite"></p>
+    </section>
+
+    <div class="petal-drift" aria-hidden="true"></div>
+
+    <!-- 3.3 Lettere -->
+    <section id="lettere" class="chapter">
+      <header class="chapter-head">
+        <p class="kicker">III · apri quando…</p>
+        <h2 class="title">Per i giorni in cui<br><em>non sono lì.</em></h2>
+      </header>
+      <div class="letters" id="letters" role="list"></div>
+      <p class="swipe-hint">scorri</p>
+    </section>
+
+    <div class="petal-drift" aria-hidden="true"></div>
+
+    <!-- 3.4 Posta aerea -->
+    <section id="posta" class="chapter">
+      <div class="posta-clouds" aria-hidden="true">
+        <svg class="cloud c1" viewBox="0 0 120 50"><path d="M18 44 C4 44 2 30 14 27 C12 14 30 8 38 18 C42 4 66 2 72 16 C80 8 98 12 96 26 C110 26 114 44 100 44 Z" /></svg>
+        <svg class="cloud c2" viewBox="0 0 120 50"><path d="M18 44 C4 44 2 30 14 27 C12 14 30 8 38 18 C42 4 66 2 72 16 C80 8 98 12 96 26 C110 26 114 44 100 44 Z" /></svg>
+        <svg class="cloud c3" viewBox="0 0 120 50"><path d="M18 44 C4 44 2 30 14 27 C12 14 30 8 38 18 C42 4 66 2 72 16 C80 8 98 12 96 26 C110 26 114 44 100 44 Z" /></svg>
+      </div>
+      <header class="chapter-head">
+        <p class="kicker">IV · posta aerea</p>
+        <h2 class="title">Da Granada,<br><em>solo per te.</em></h2>
+      </header>
+
+      <div class="posta-stage" id="postaStage">
+        <svg class="posta-string" aria-hidden="true"><line id="postaString" /></svg>
+        <div class="posta-plane" id="postaPlane" role="button" tabindex="0" aria-label="L'aereo con la lettera: toccalo">
+          <svg viewBox="0 0 64 40" aria-hidden="true">
+            <path class="pl-wing-b" d="M30 20 L18 4 L24 4 L40 18 Z" />
+            <path class="pl-body" d="M4 22 C4 17 10 16 16 16 L50 16 C58 16 63 18 63 20 C63 22 58 24 50 24 L16 24 C10 24 4 25 4 22 Z" />
+            <path class="pl-tail" d="M6 17 L2 6 L8 6 L16 16 Z" />
+            <path class="pl-wing" d="M30 20 L16 38 L23 38 L42 22 Z" />
+            <circle class="pl-win" cx="46" cy="19.5" r="1.6" /><circle class="pl-win" cx="40" cy="19.5" r="1.6" /><circle class="pl-win" cx="34" cy="19.5" r="1.6" />
+          </svg>
+        </div>
+        <div class="posta-env" id="postaEnv">
+          <svg class="posta-chute" viewBox="0 0 100 92" aria-hidden="true"><path d="M50 88 C20 66 4 50 4 30 C4 14 16 4 29 4 C39 4 46 10 50 18 C54 10 61 4 71 4 C84 4 96 14 96 30 C96 50 80 66 50 88 Z" /><path class="chute-lines" d="M14 46 L50 120 M50 88 L50 120 M86 46 L50 120" /></svg>
+          <button class="pe-body" id="postaSeal" aria-label="Apri la lettera">
+            <span class="pe-flap" aria-hidden="true"></span>
+            <span class="pe-stamp" aria-hidden="true"><b>Posta aerea</b><i>✈</i></span>
+            <span class="pe-mark" aria-hidden="true">GRANADA · 10.11.2026</span>
+            <span class="pe-to" aria-hidden="true">per <em></em><small>Veternigo</small></span>
+            <svg class="pe-seal" viewBox="0 0 100 100" aria-hidden="true"><use href="#waxSeal" /></svg>
+          </button>
+        </div>
+        <canvas class="posta-hearts" id="postaHearts" aria-hidden="true"></canvas>
+        <div class="posta-note" id="postaNote">
+          <p class="pn-text" id="postaText"></p>
+          <p class="pn-sign">— <span id="postaSign"></span></p>
+        </div>
+      </div>
+
+      <p class="posta-hint" id="postaHint">Prendila al volo</p>
+      <div class="posta-reply" id="postaReplyBox">
+        <button class="btn" id="postaReply">Rispondi con un cuore</button>
+        <p class="posta-sent" id="postaSent" aria-live="polite"></p>
+      </div>
+
+      <figure class="song" data-song="cielo" hidden>
+        <svg class="song-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>
+        <blockquote class="song-text"></blockquote>
+        <figcaption class="song-cap"></figcaption>
+      </figure>
+    </section>
+
+    <!-- Due finestre: io a Granada, tu a Veternigo, che scorrendo si avvicinano e diventano "noi" (nascosta se mancano le foto) -->
+    <section id="finestre" class="chapter" hidden>
+      <div class="fw-stage" id="fwStage">
+        <header class="chapter-head">
+          <p class="kicker">noi due</p>
+          <h2 class="title">Io qui, tu lì.<br><em>Ancora per poco.</em></h2>
+        </header>
+        <div class="fw-row" id="fwRow">
+          <svg class="fw-thread" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="5" x2="100" y2="5" /></svg>
+          <figure class="fw-win fw-io" id="fwIo"><div class="fw-media"></div><figcaption>Granada · io</figcaption></figure>
+          <figure class="fw-win fw-tu" id="fwTu"><div class="fw-media"></div><figcaption>Veternigo · tu</figcaption></figure>
+          <figure class="fw-noi" id="fwNoi"><div class="fw-media"></div></figure>
+        </div>
+        <p class="fw-cap" id="fwCap"></p>
+      </div>
+    </section>
+
+    <!-- I nostri momenti: foto e video da content.json → rullino (nascosto se vuoto) -->
+    <section id="rullino" class="chapter" hidden>
+      <header class="chapter-head">
+        <p class="kicker">i nostri momenti</p>
+        <h2 class="title">Piccole prove<br><em>che è tutto vero.</em></h2>
+      </header>
+      <div class="roll" id="roll" aria-live="polite"></div>
+      <p class="roll-hint" id="rollHint">strofina la foto col dito per svilupparla</p>
+    </section>
+
+    <!-- 3.5 Anche adesso -->
+    <section id="conte" class="chapter">
+      <header class="chapter-head">
+        <p class="kicker">V · anche adesso</p>
+        <h2 class="title">Non sono lì.<br><em>Ma sono qui.</em></h2>
+      </header>
+
+      <div class="beat" id="beat">
+        <svg class="beat-thread" viewBox="0 0 320 400" preserveAspectRatio="none" aria-hidden="true">
+          <path class="thread-base" id="threadPath" d="M30 18 C 40 120, 120 120, 160 205 C 200 290, 280 290, 290 384" />
+          <path class="thread-glow" id="threadGlow" d="M30 18 C 40 120, 120 120, 160 205 C 200 290, 280 290, 290 384" />
+          <circle class="thread-end" cx="30" cy="18" r="4" />
+          <circle class="thread-end" cx="290" cy="384" r="4" />
+        </svg>
+        <span class="beat-city beat-from">Granada · io</span>
+        <span class="beat-city beat-to">Veternigo · tu</span>
+        <button class="beat-heart" id="beatHeart" aria-label="Tieni premuto il cuore">
+          <span class="beat-ring" aria-hidden="true"></span>
+          <svg viewBox="0 0 100 92" aria-hidden="true"><path d="M50 88 C20 66 4 50 4 30 C4 14 16 4 29 4 C39 4 46 10 50 18 C54 10 61 4 71 4 C84 4 96 14 96 30 C96 50 80 66 50 88 Z" /></svg>
+        </button>
+      </div>
+      <p class="beat-hint" id="beatHint">Tieni il dito sul cuore</p>
+      <div class="beat-words" id="beatWords" aria-live="polite"></div>
+      <p class="beat-after" id="beatAfter">Puoi tornare qui tutte le volte che vuoi.<br>Il mio batte sempre, e batte per te.</p>
+
+      <div class="moon-block">
+        <svg class="moon" id="moon" viewBox="-60 -60 120 120" aria-hidden="true"></svg>
+        <p class="moon-kicker" id="moonKicker">stasera</p>
+        <p class="moon-text" id="moonText"></p>
+      </div>
+
+      <div class="voice" id="voice" hidden>
+        <p class="moon-kicker">e se ti manco</p>
+        <button class="voice-btn" id="voiceBtn" aria-label="Ascolta la mia voce">
+          <svg class="voice-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z" /></svg>
+          <span class="voice-bars" aria-hidden="true"></span>
+        </button>
+        <p class="voice-cap">Premi: è la mia voce.</p>
+        <audio id="voiceAudio" src="assets/voce.mp3" preload="none"></audio>
+      </div>
+    </section>
+
+    <!-- 3.6 Solo te: le frasi, una alla volta, mentre i miliardi diventano un cuore -->
+    <section id="solote" class="chapter">
+      <div class="st-stage" id="stStage">
+        <canvas class="st-dots" id="stDots" aria-hidden="true"></canvas>
+        <header class="chapter-head">
+          <p class="kicker">VI · solo te</p>
+          <h2 class="title">Cose che ti direi<br><em>guardandoti negli occhi.</em></h2>
+        </header>
+        <div class="st-lines" id="stLines" aria-live="polite"></div>
+        <div class="st-pips" id="stPips" aria-hidden="true"></div>
+        <p class="st-hint" id="stHint">scorri piano</p>
+      </div>
+    </section>
+
+    <!-- 3.7 Finale -->
+    <section id="finale" class="chapter">
+      <svg id="finaleFlower" viewBox="0 0 300 520" aria-hidden="true"></svg>
+      <div class="finale-text">
+        <h2 class="finale-title">Un pensiero per il nostro <em>primo mese ufficiale!</em></h2>
+        <p class="finale-lead" id="finaleLead"></p>
+        <p class="finale-msg" id="finaleMsg"></p>
+        <figure class="song" data-song="finale" hidden>
+        <svg class="song-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>
+        <blockquote class="song-text"></blockquote>
+        <figcaption class="song-cap"></figcaption>
+      </figure>
+        <p class="signature">Endy</p>
+        <button class="link-btn" id="restart">ricomincia</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Il viaggio: km che scendono mentre lei scorre -->
+  <div class="rail" id="rail" aria-hidden="true">
+    <i class="rail-line"></i>
+    <span class="rail-heart" id="railHeart"><svg viewBox="0 0 100 92"><path d="M50 88 C20 66 4 50 4 30 C4 14 16 4 29 4 C39 4 46 10 50 18 C54 10 61 4 71 4 C84 4 96 14 96 30 C96 50 80 66 50 88 Z" /></svg><b id="railKm">1.596 km</b></span>
+  </div>
+
+  <!-- Bottom sheet del petalo -->
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-content" id="sheetContent">
+    <p class="sheet-label" id="sheetLabel"></p>
+    <h3 class="sheet-title" id="sheetTitle"></h3>
+    <p class="sheet-text" id="sheetText"></p>
+    <img class="sheet-photo" id="sheetPhoto" alt="" loading="lazy" decoding="async" hidden>
+    <svg class="doodle" id="sheetDoodle" viewBox="0 0 80 80" aria-hidden="true"></svg>
+    </div>
+    <div class="sheet-nav">
+      <button class="nav-btn" id="sheetPrev" aria-label="Petalo precedente">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 L8 12 L15 19" /></svg>
+      </button>
+      <button class="btn btn-sun" id="sheetNext">Prossimo petalo</button>
+    </div>
+    <button class="link-btn sheet-close" id="sheetClose">chiudi</button>
+  </aside>
+
+  <!-- Lettera aperta -->
+  <div class="letter-overlay" id="letterOverlay" role="dialog" aria-modal="true" hidden>
+    <article class="letter-paper" id="letterPaper">
+      <div class="letter-fold" aria-hidden="true"></div>
+      <p class="letter-label" id="letterLabel"></p>
+      <p class="letter-hello" id="letterHello"></p>
+      <div class="letter-body" id="letterBody"></div>
+      <div class="letter-sign"><span id="letterBye"></span><b id="letterName">Endy</b></div>
+      <svg class="letter-petal" viewBox="0 0 30 64" aria-hidden="true"><path d="M15 2 C26 14 29 40 15 62 C1 40 4 14 15 2 Z" /><path class="vein" d="M15 8 C16 24 16 42 15 56" /></svg>
+      <button class="link-btn letter-close" id="letterClose">richiudi</button>
+    </article>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

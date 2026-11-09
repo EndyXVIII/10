@@ -1,0 +1,100 @@
+{
+  "nome_lei": "Sandy",
+  "nome_lui": "Endy",
+  "nome_affettuoso": "amore mio",
+  "data_inizio": "2026-10-10",
+  "ora_inizio": "13:00",
+  "messaggio_finale_girasole": "Non sei la persona che ho lasciato qui mentre partivo. Sei la persona che porterò con me ovunque andrò.",
+  "messaggio_festa": "Siamo distanti, amore mio, quindi lo “festeggiamo” così: tu a Veternigo, io a Granada, e in mezzo questa pagina piena di girasoli. Il resto lo recuperiamo con gli interessi appena ci vediamo.",
+  "messaggio_chiusura": "Distanti fisicamente ma il mio cuore è intrecciato al tuo",
+  "messaggio_segreto": "Sei il mio posto preferito in questo mondo.",
+  "canzone": {
+    "titolo": "Eri solo da incontrare",
+    "artista": "Alfa",
+    "frasi": {
+      "apertura": "Te che eri solo da incontrare",
+      "mappa": "Che valeva la pena aspettare,\nper una come te",
+      "cielo": "Se ci pensi, il nostro amore,\nassomiglia a una canzone",
+      "finale": "Nel bene e nel male,\ntu eri solo da incontrare"
+    }
+  },
+  "posta": {
+    "frase": "Sono qui,\namore mio",
+    "biglietto": "Questa lettera ha fatto 1.596 chilometri per arrivare da te.\nDentro non c'era carta: c'erano tutti i cuori che ti mando ogni giorno, anche quando non lo sai.\nTienili. Sono tuoi."
+  },
+  "finestre": {
+    "io": "assets/foto/1.gif",
+    "tu": "assets/foto/2.gif",
+    "noi": "assets/foto/3.jpg",
+    "posizione_noi": "50% 22%",
+    "didascalia": "Ogni chilometro finisce qui: in noi due."
+  },
+  "rullino": [
+    {"src": "assets/foto/4.jpg", "didascalia": "Come ci vediamo adesso", "posizione": "50% 33%"}
+  ],
+  "battito": [
+    "Lo senti?",
+    "<em>È il mio.</em>",
+    "Parte da Granada e arriva fino a te, un battito alla volta.",
+    "Quando ti sembro lontano, appoggia qui il dito.<br><em>Io ci sono.</em>"
+  ],
+  "solo_te": [
+    "Se qualcuno dovesse chiedermi cos'è per me l'amore,<br><em>parlerei solo di te.</em>",
+    "Anche quando il mondo non applaudirà per te, <em>lo farò io.</em><br>E anche senza un trofeo, correrò sempre da te solo per dirti quanto sono felice per te, anche per i piccoli ma immensi traguardi che riesci a raggiungere.",
+    "Miliardi di occhi, ma voglio continuare a guardare solo i tuoi.<br>Miliardi di mani, ma voglio tenere solo la tua.<br>Miliardi di labbra, ma voglio baciare solo le tue.<br><em>Miliardi di persone, ma io voglio solo te.</em>",
+    "È assurdo quanto mi senta legato a te.<br><em>È come se ci amassimo anche in altri universi.</em>",
+    "<span class=\"st-q\">«Ma tu mi ami?»</span>Sandy, se al termine di questa vita ne avessi un'altra, la prima cosa che farei sarebbe cercarti, <em>solo per non perdere neanche un secondo senza di te.</em>",
+    "<em>Morirei con te,<br>se me lo chiedessi.</em>"
+  ],
+  "petali": [
+    {"giorno": 1,  "titolo": "Il modo in cui mi guardi, con quei tuoi occhi color caffè", "testo": "", "foto": ""},
+    {"giorno": 2,  "titolo": "La tua voce", "testo": "", "foto": ""},
+    {"giorno": 3,  "titolo": "Il tuo profumo", "testo": "", "foto": ""},
+    {"giorno": 4,  "titolo": "Il modo in cui mi baci e mi abbracci", "testo": "", "foto": ""},
+    {"giorno": 5,  "titolo": "Quando canti in macchina", "testo": "", "foto": ""},
+    {"giorno": 6,  "titolo": "Quando insulti la mia musica", "testo": "", "foto": ""},
+    {"giorno": 7,  "titolo": "Quando sei tu a dirmi di svegliarmi", "testo": "", "foto": ""},
+    {"giorno": 8,  "titolo": "I soprannomi che diamo alle cose", "testo": "", "foto": ""},
+    {"giorno": 9,  "titolo": "La tua simpatia", "testo": "", "foto": ""},
+    {"giorno": 10, "titolo": "Quando ti addormenti e spari cacchiate", "testo": "", "foto": ""},
+    {"giorno": 11, "titolo": "Quando fai la principessa", "testo": "", "foto": ""},
+    {"giorno": 12, "titolo": "Quando ti guardo giocare", "testo": "", "foto": ""},
+    {"giorno": 13, "titolo": "Quando ti giri dall'altra parte, con la schiena verso di me", "testo": "", "foto": ""},
+    {"giorno": 14, "titolo": "Come riesci a farmi sentire in pace", "testo": "", "foto": ""},
+    {"giorno": 15, "titolo": "Che con te posso essere semplicemente Endy", "testo": "", "foto": ""},
+    {"giorno": 16, "titolo": "Come riesci a fermarmi quando la mia testa corre troppo", "testo": "", "foto": ""},
+    {"giorno": 17, "titolo": "La tua sensibilità", "testo": "", "foto": ""},
+    {"giorno": 18, "titolo": "La tua determinazione", "testo": "", "foto": ""},
+    {"giorno": 19, "titolo": "La tua dolcezza", "testo": "", "foto": ""},
+    {"giorno": 20, "titolo": "Il tuo sorriso", "testo": "", "foto": ""},
+    {"giorno": 21, "titolo": "Il caso che ha fatto incrociare le nostre strade", "testo": "", "foto": ""},
+    {"giorno": 22, "titolo": "Quando cerchi di non farmi vedere che non stai al massimo", "testo": "", "foto": ""},
+    {"giorno": 23, "titolo": "Ridere con te di cose che fanno ridere solo noi", "testo": "", "foto": ""},
+    {"giorno": 24, "titolo": "Che anche non fare niente, con te, diventa speciale", "testo": "", "foto": ""},
+    {"giorno": 25, "titolo": "Guardarti mentre fai qualcosa, senza che te ne accorga", "testo": "", "foto": ""},
+    {"giorno": 26, "titolo": "Che sei la prima persona a cui voglio raccontare tutto", "testo": "", "foto": ""},
+    {"giorno": 27, "titolo": "Le battaglie che affronti in silenzio", "testo": "", "foto": ""},
+    {"giorno": 28, "titolo": "I sogni che porti dentro", "testo": "", "foto": ""},
+    {"giorno": 29, "titolo": "Come rendi più belle le mie giornate, senza nemmeno accorgertene", "testo": "", "foto": ""},
+    {"giorno": 30, "titolo": "Che mi hai fatto scoprire una felicità che non sapevo di cercare", "testo": "", "foto": ""},
+    {"giorno": 31, "titolo": "Semplicemente, che sei tu", "testo": "", "foto": ""}
+  ],
+  "lettere_saluto": "Amore,",
+  "lettere_firma": "Il tuo,",
+  "lettere": [
+    {"etichetta": "Apri quando mi pensi",
+     "testo": "Adesso, mentre leggi, ti sto pensando anch'io. Non è un modo di dire: succede ogni giorno, nei momenti più semplici. Quando cammino per Granada, quando vedo qualcosa che ti farebbe ridere, quando la sera spengo la luce.\n\nOgni volta che mi pensi, immagina un filo che parte da te e arriva dritto qui. Dall'altra parte ci sono io, e lo sto tenendo stretto. Ogni giorno che passa non ci allontana: è solo un giorno in meno al prossimo abbraccio."},
+    {"etichetta": "Apri quando la giornata è andata storta",
+     "testo": "Vieni qui. Lo so che non posso abbracciarti davvero, ma fai finta per un attimo: appoggia la testa sulla mia spalla e respira piano.\n\nCon me non devi essere forte per forza e non devi sorridere se non ti va. Raccontami tutto, anche le cose piccole, anche se non trovi le parole giuste. Io ti ascolto, sempre. Le giornate storte passano. Io invece resto."},
+    {"etichetta": "Apri quando non riesci a dormire",
+     "testo": "Chiudi gli occhi. Immagina il mio braccio intorno a te e il mio respiro lento vicino al tuo orecchio. Sono lì, anche se in mezzo ci sono 1.596 chilometri: il buio è lo stesso, e il cielo pure.\n\nPensa a una cosa bella che faremo insieme quando torno e lasciati portare. Domattina sarai tu a dirmi di svegliarmi, come sempre. E io sarò felice di sentire la tua voce per prima."},
+    {"etichetta": "Apri quando hai bisogno di ridere",
+     "testo": "Promemoria ufficiale: in questo preciso momento, a Granada, c'è un ragazzo che ascolta la musica che tu insulti. Probabilmente a volume alto. Probabilmente pensando a te che la insulti.\n\nE ricordati che quando ti addormenti spari cacchiate bellissime: io me le ricordo tutte, e prima o poi ci scrivo un libro. Titolo provvisorio: «La mia principessa, alle due di notte». Ecco, adesso sorridi. Lo so che stai sorridendo."},
+    {"etichetta": "Apri quando ti manco troppo",
+     "testo": "Anche tu mi manchi. Tantissimo. Probabilmente adesso sto guardando una tua foto, o rileggendo un tuo messaggio per la decima volta. Se ti viene da piangere non trattenerti: vuol dire solo che quello che abbiamo è vero.\n\nIo intanto conto i giorni a quando potrò cercarti tra la gente, vederti arrivare e stringerti così forte da recuperare tutti gli abbracci che ci siamo persi. Fino ad allora, la sera, guarda la luna: la sto guardando anch'io."},
+    {"etichetta": "Apri quando dimentichi quanto sei speciale",
+     "testo": "Te lo ricordo io, amore: io ti vedo. Vedo la tua sensibilità, la tua determinazione, la tua dolcezza. Vedo le battaglie che affronti in silenzio e i sogni che porti dentro.\n\nNon devi cambiare niente per essere abbastanza: per me sei già tutto. E se un giorno ti sembrerà di essere sola, rileggi questa lettera. Non lo sei. Ci sono io, e ci sarò."},
+    {"etichetta": "Apri quando hai bisogno di sentirmi vicino",
+     "testo": "Fai una cosa per me: metti una mano sul cuore e tienila lì qualche secondo. Ecco, quello è il posto in cui abito io. Non a Granada, non a 1.596 chilometri: lì.\n\nOgni volta che ridi, ci sono. Ogni volta che hai paura, ci sono. Ogni volta che la sera il telefono si illumina con il mio nome, ci sono. La distanza è solo un numero su una mappa. Io sono con te, sempre."}
+  ]
+}
